@@ -2,29 +2,35 @@
 GET  http://localhost:1234/movies
 
 ### Recuperar una pelicula por su id 
-GET  http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+GET  http://localhost:1234/movies/9e6106f0-848b-4810-a11a-3d832a5610f9
 
 ### Recuperar una pelicula por su genero 
-GET  http://localhost:1234/movies?genre=fantasy
+GET  http://localhost:1234/movies?genre=drama
 
 ### Crear una pelicula con POST, en el mismo recurso
 POST http://localhost:1234/movies
 Content-Type: application/json
 
   {
-
-    "title": "Avatar",
+    "title": "El Coco Enojao",
+    "year": 1994,
+    "director": "Frank Darabont",
+    "duration": 142,
+    "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+    "genre": [
+      "Drama"
+    ],
+    "rate": 9.3
 
   }
 
 ### Para actualizar ls datos de una pélicula 
-PATCH  http://localhost:1234/movies/2c072c6e-8e7a-4b83-9c05-f78e5f08f835
+PATCH  http://localhost:1234/movies/f637af41-cbeb-49b3-8d62-268d4c7fbbf5
 Content-Type: application/json
 
 {
-    "year": 2012,
-    "title": "Avatar: La Leyenda de Ang"
+    "title": "Gladiador pt. 12"
 }
 ### Para eliminar una pelicula 
-DELETE  http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+DELETE  http://localhost:1234/movies/f637af41-cbeb-49b3-8d62-268d4c7fbbf5
 Content-Type: application/json

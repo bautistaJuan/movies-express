@@ -1,4 +1,4 @@
-const z = require("zod");
+import z from "zod";
 
 const movieSchema = z.object({
   title: z.string({
@@ -29,14 +29,14 @@ const movieSchema = z.object({
   ),
 });
 
-exports.validateMovie = function validateMovie(object) {
+export function validateMovie(object) {
   return movieSchema.safeParse(object);
-};
-exports.validatePartialMovie = function validatePartialMovie(object) {
+}
+export function validatePartialMovie(object) {
   // Lo que indicamos aqui es que todas las opciones (con .partial() ) son opcionales
   // Pero si llega algun parametro que coincida con alguno de los valores del objeto
   // Lo debe validar como se debe
   return movieSchema.partial().safeParse(object);
-};
+}
 
 // module.exports = { validateMovie, validatePartialMovie };
