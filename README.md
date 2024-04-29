@@ -1,1 +1,9 @@
-## Este poyecto fue realizado gracias al curso de youtube de midudev
+# Curso de Node.JS.
+- Contenido visto
+  -  MVC
+  -  NODE.JS
+  -  Express.JS
+  -  API REST
+  -  CORS
+  -  MySQL
+ 
