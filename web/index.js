@@ -12,7 +12,7 @@ async function pelis() {
     html.innerHTML = `
         <article data-id="${movie.id}">
          <h2>${movie.title}</h2>
-         <img src="${movie.poster}" alt="${movie.title}">
+         <img src="${movie.poster}" alt="${movie.title}" class="img-movie">
          <p>${movie.year}</p>
          <button>Eliminar</button>
         </article>
