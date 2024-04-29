@@ -1,5 +1,9 @@
 async function pelis() {
-  const data = await fetch("http://localhost:1234/movies");
+  // Para probarlo localmente
+  // const data = await fetch("http://localhost:1234/movies");
+  const data = await fetch(
+    "https://movies-express-dev-mqkq.3.us-1.fl0.io/movies/"
+  );
   const json = await data.json();
   const main = document.querySelector("main");
 
@@ -18,7 +22,7 @@ async function pelis() {
       if (e.target.matches("button")) {
         const article = e.target.closest("article");
         const id = article.dataset.id;
-        fetch(`http://localhost:1234/movies/${id}`, {
+        fetch(`https://movies-express-dev-mqkq.3.us-1.fl0.io/movies/${id}`, {
           method: "DELETE",
         }).then(res => {
           if (res.ok) {
